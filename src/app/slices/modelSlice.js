@@ -15,6 +15,6 @@ export const modelSlice = createSlice({
 });
 
 export const { setModels } = modelSlice.actions;
-export const selectModels = state => state;
+export const selectModels = state => state.models.models;
 
 export default modelSlice.reducer;

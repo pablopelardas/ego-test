@@ -10,9 +10,19 @@ module.exports = {
         },
         fontSize:{
             'default': '1.4rem',
+            'card_title': ['2.8rem', {
+                lineHeight: '3rem',
+            }],
+            'card_price': ['1.4rem', {
+                lineHeight: '1.7rem',
+            }],
             'title': ['3.5rem', {
                 lineHeight: '4.4rem'
             }],
+
+        },
+        borderWidth:{
+            'default': '1px',
         },
         fontFamily:{
             'mont': ['Montserrat', 'sans-serif'],
