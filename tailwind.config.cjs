@@ -7,6 +7,18 @@ module.exports = {
         extend: {},
         minWidth:{
             'screen': '100vw'
+        },
+        fontSize:{
+            'default': '1.4rem',
+            'title': ['3.5rem', {
+                lineHeight: '4.4rem'
+            }],
+        },
+        fontFamily:{
+            'mont': ['Montserrat', 'sans-serif'],
+        },
+        borderColor:{
+            'fade': '#D8D8D8',
         }
     },
     plugins: [],
