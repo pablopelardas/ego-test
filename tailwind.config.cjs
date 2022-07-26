@@ -4,32 +4,42 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,html}"],
     theme: {
-        extend: {},
-        minWidth:{
-            'screen': '100vw'
-        },
-        fontSize:{
-            'default': '1.4rem',
-            'card_title': ['2.8rem', {
-                lineHeight: '3rem',
-            }],
-            'card_price': ['1.4rem', {
-                lineHeight: '1.7rem',
-            }],
-            'title': ['3.5rem', {
-                lineHeight: '4.4rem'
-            }],
+        extend: {
+            minWidth:{
+                'screen': '100vw'
+            },
+            minHeight:{
+                'home': '80vh'
+            },
+            fontSize:{
+                'default': '1.4rem',
+                'card_title': ['2.8rem', {
+                    lineHeight: '3rem',
+                }],
+                'card_price': ['1.4rem', {
+                    lineHeight: '1.7rem',
+                }],
+                'title': ['3.5rem', {
+                    lineHeight: '4.4rem'
+                }],
+                'menu_close': '1.7rem',
+                'menu_field': '2.0rem',
 
+            },
+            borderWidth:{
+                'default': '1px',
+            },
+            fontFamily:{
+                'mont': ['Montserrat', 'sans-serif'],
+            },
+            borderColor:{
+                'fade': '#D8D8D8',
+            },
+            backgroundColor:{
+                'fade': '#EFEEEF',
+            }
         },
-        borderWidth:{
-            'default': '1px',
-        },
-        fontFamily:{
-            'mont': ['Montserrat', 'sans-serif'],
-        },
-        borderColor:{
-            'fade': '#D8D8D8',
-        }
+        
     },
     plugins: [],
 };
