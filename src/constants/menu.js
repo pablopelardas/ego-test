@@ -2,7 +2,7 @@ export const fields = [
     [
         {
             name: 'Modelos',
-            url: null,
+            url: '/',
         },
         {
             name: 'Servicios y Accesorios',

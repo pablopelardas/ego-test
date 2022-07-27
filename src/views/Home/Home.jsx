@@ -24,7 +24,6 @@ const Home = () => {
         <section className='mt-28 w-full min-h-[89vh]'>
             <Header setModels={setModels}/>
             {content}
-            <Menu />
         </section>
     );
 };
