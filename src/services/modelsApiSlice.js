@@ -1,5 +1,5 @@
 import { apiSlice } from '../app/api/apiSlice';
-import { setModels } from '../app/slices/modelSlice';
+import { setModel, setModels } from '../app/slices/modelSlice';
 
 export const modelsApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
@@ -10,7 +10,6 @@ export const modelsApiSlice = apiSlice.injectEndpoints({
             },
             async onQueryStarted(query, {dispatch, queryFulfilled}) {
                 try{
-                    console.log('query started');
                     const {data} = await queryFulfilled;
                     console.log(data);
                     dispatch(setModels(data));
@@ -19,8 +18,24 @@ export const modelsApiSlice = apiSlice.injectEndpoints({
                     console.log(e);
                 }
             }
-        })
+        }),
+        getModelDetail: builder.query({
+            query: (id) => {
+                let url = `/models/${id}`;
+                return {url};
+            },
+            async onQueryStarted(query, {dispatch, queryFulfilled}) {
+                try{
+                    const {data} = await queryFulfilled;
+                    console.log(data);
+                    dispatch(setModel(data));
+                }catch(e){
+                    console.log('Error fetching models');
+                    console.log(e);
+                }
+            }
+        }),
     }),
 });
 
-export const { useGetModelsQuery} = modelsApiSlice;
+export const { useGetModelsQuery, useGetModelDetailQuery} = modelsApiSlice;

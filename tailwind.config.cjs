@@ -24,6 +24,22 @@ module.exports = {
                 }],
                 'menu_close': '1.7rem',
                 'menu_field': '2.0rem',
+                'detail_name': ['2.0rem', {
+                    fontWeight: '600',
+                    lineHeight: '2.7rem',
+                }],
+                'detail_title': ['3.5rem', {
+                    lineHeight: '4.4rem',
+                    fontWeight: '600',
+                }],
+                'detail_sub': ['2.0rem', {
+                    lineHeight: '2.7rem',
+                    fontWeight: '600',
+                }],
+                'detail_desc':['1.6rem', {
+                    lineHeight: '2.7rem',
+                    fontWeight: '400'
+                }]
 
             },
             borderWidth:{
@@ -37,6 +53,11 @@ module.exports = {
             },
             backgroundColor:{
                 'fade': '#EFEEEF',
+            },
+            textColor:{
+                'detail_name': '#373737',
+                'detail_sub': '#373737',
+                'detail_title': '#191919',
             }
         },
         

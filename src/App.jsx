@@ -4,6 +4,7 @@ import {Route, Routes} from 'react-router-dom';
 import Layout from './views/Layout/Layout';
 import Home from './views/Home/Home';
 import {useGetModelsQuery} from './services/modelsApiSlice.js';
+import ModelDetail from './views/ModelDetail/ModelDetail.jsx';
 
 function App() {
     useGetModelsQuery();
@@ -11,7 +12,7 @@ function App() {
         <Routes>
             <Route path='/*' element={<Layout />} >
                 <Route index element={<Home />} />
-                {/* <Route path='/detail' element={<ModelDetail />} /> */}
+                <Route path='detail/:id' element={<ModelDetail />} />
             </Route>
         </Routes>
     );
