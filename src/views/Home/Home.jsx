@@ -3,7 +3,6 @@ import ModelsContainer from './components/ModelsContainer/ModelsContainer';
 import Header from './components/Header/Header';
 import { selectModels } from '../../app/slices/modelSlice';
 import { useSelector } from 'react-redux';
-import Menu from '../../components/Menu/Menu';
 
 const Home = () => {
     const storeModels = useSelector(selectModels);
