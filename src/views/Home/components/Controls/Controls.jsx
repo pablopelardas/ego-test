@@ -13,11 +13,11 @@ const Controls = ({handleFilter, handleOrder}) => {
 
 
     return (
-        <div className='w-full flex justify-between border-b-default border-fade pb-4 text-default px-20'>
-            <div className='flex justify-center items-center gap-16'>
+        <div className='flex justify-between w-full px-20 pb-4 border-b-default border-fade text-default'>
+            <div className='flex items-center justify-center gap-16'>
                 <Dropdown handleChange={handleFilter} name='Filtrar por' className={'md:hidden'}/>
-                <div className='hidden md:flex gap-10'>
-                    {filterFields.map((field, index) => <button className={`${selectedFilter === index && 'bg-gray-100 py-2 px-6 rounded-full'}`} key={`${field} ${index}`} onClick={() => handleClick(index)}>{field}</button>)}
+                <div className='hidden gap-10 md:flex'>
+                    {filterFields.map(({name}, index) => <button className={`${selectedFilter === index && 'bg-gray-100 py-2 px-6 rounded-full'}`} key={`${name} ${index}`} onClick={() => handleClick(index)}>{name}</button>)}
                 </div>
 
             </div>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { filters } from '../../../utils/filters';
-import { order } from '../../../utils/order';
+import { filterFields, orderFields } from '../../../constants/dropdown.js';
 
 const useControls = (models, setFilteredModels) => {
     const [selectedFilter, setSelectedFilter] = useState(0);
@@ -13,8 +12,8 @@ const useControls = (models, setFilteredModels) => {
         if (models && models.length) {
             setFilteredModels(
                 models
-                    .filter(filters[selectedFilter])
-                    .sort(order[selectedOrder])
+                    .filter(filterFields[selectedFilter].cb)
+                    .sort(orderFields[selectedOrder].cb)
             );
         }
     }, [ selectedFilter, selectedOrder]);

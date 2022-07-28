@@ -26,14 +26,14 @@ const Dropdown = ({name, handleChange}) => {
 
     return (
         <div>
-            {filter  && <button className="p-3 justify-center items-center gap-3 font-semibold text-default hidden md:flex cursor-default" type="button">{name}</button>}
+            {filter  && <button className="items-center justify-center hidden gap-3 p-3 font-semibold cursor-default text-default md:flex" type="button">{name}</button>}
             <button onClick={toggle} className={`p-3 flex justify-center items-center gap-3 font-semibold text-default ${filter && 'md:hidden'}`} type="button">{name}{!isOpen ? <ArrowDown /> : <ArrowUp />}</button>
             <div className={`z-10 w-62 flex justify-center bg-white rounded divide-y divide-gray-500 shadow dark:bg-gray-800 absolute p-4 ${!isOpen && 'hidden'}`}>
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
                     {
                         filter
-                            ? filterFields.map((field, index) => <DropField onClick={handleClick} index={index} key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'} />)
-                            : orderFields.map((field, index) => <DropField onClick={handleClick} index={index} key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'}/>)
+                            ? filterFields.map(({name}, index) => <DropField onClick={handleClick} index={index} key={`${name} ${index}`} html={name} className={index==selected && 'bg-gray-100'} />)
+                            : orderFields.map(({name}, index) => <DropField onClick={handleClick} index={index} key={`${name} ${index}`} html={name} className={index==selected && 'bg-gray-100'}/>)
                     }
                 </ul>
             </div>
