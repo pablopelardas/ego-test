@@ -5,7 +5,7 @@ import ArrowUp from '../../../../assets/Botones/ArrowUp.jsx';
 import DropField from './DropField.jsx';
 import { orderFields, filterFields } from '../../../../constants/dropdown.js';
 
-const Dropdown = ({name}) => {
+const Dropdown = ({name, handleChange}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [filter, setFilter] = useState(false);
     const [selected, setSelected] = useState(0);
@@ -18,6 +18,12 @@ const Dropdown = ({name}) => {
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const handleClick = (e,index) => {
+        setSelected(index);
+        handleChange(index);
+        toggle();
+    };
+
     return (
         <div>
             {filter  && <button className="p-3 justify-center items-center gap-3 font-semibold text-default hidden md:flex cursor-default" type="button">{name}</button>}
@@ -26,8 +32,8 @@ const Dropdown = ({name}) => {
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
                     {
                         filter
-                            ? filterFields.map((field, index) => <DropField key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'} />)
-                            : orderFields.map((field, index) => <DropField key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'}/>)
+                            ? filterFields.map((field, index) => <DropField onClick={handleClick} index={index} key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'} />)
+                            : orderFields.map((field, index) => <DropField onClick={handleClick} index={index} key={`${field} ${index}`} html={field} className={index==selected && 'bg-gray-100'}/>)
                     }
                 </ul>
             </div>
@@ -37,7 +43,7 @@ const Dropdown = ({name}) => {
 
 Dropdown.propTypes = {
     name: propTypes.string.isRequired,
-    fields: propTypes.array.isRequired,
+    handleChange: propTypes.func.isRequired
 };
 
 export default Dropdown;

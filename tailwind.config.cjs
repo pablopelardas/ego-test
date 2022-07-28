@@ -45,6 +45,14 @@ module.exports = {
                     fontWeight: '400'
                 }],
                 'dropdown_field': '1rem',
+                'selected_button': ['1.3rem', {
+                    lineHeight: '2.3rem',
+                    fontWeight: '500',
+                }],
+                'soft_black': ['1.3rem', {
+                    lineHeight: '2.3rem',
+                    fontWeight: '800',
+                }]
 
             },
             borderWidth:{
@@ -55,9 +63,11 @@ module.exports = {
             },
             borderColor:{
                 'fade': '#D8D8D8',
+                'actual_page': '#D0021B'
             },
             backgroundColor:{
                 'fade': '#EFEEEF',
+                'soft_black': '#191919'
             },
             textColor:{
                 'detail_name': '#373737',
@@ -65,9 +75,12 @@ module.exports = {
                 'detail_title': '#191919',
                 'dropdown_field': '#191919',
                 'title_desktop': '#373737',
+                'actual_page': '#D0021B',
+                'selected_button': '#FFFFFF',
+                'selected_name': '#EB0A1E',
+                'soft_black': '#191919',
             }
         },
-        
     },
     plugins: [],
 };

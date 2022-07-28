@@ -20,5 +20,6 @@ export const modelSlice = createSlice({
 
 export const { setModels, setModel } = modelSlice.actions;
 export const selectModels = state => state.models.models;
+export const selectModel = state => state.models.model;
 
 export default modelSlice.reducer;
