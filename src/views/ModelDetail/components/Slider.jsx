@@ -7,11 +7,11 @@ import DetailCard from './DetailCard';
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
-        items: 2
+        items: 6
     },
     Desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 2
+        breakpoint: { max: 3000, min: 1440 },
+        items: 4
     },
     Tablet: {
         breakpoint: { max: 1024, min: 464 },

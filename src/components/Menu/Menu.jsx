@@ -15,7 +15,7 @@ const Menu = () => {
     };
     return (
         <aside className={`${menu ? 'flex' : 'hidden'} w-full flex flex-col h-auto max-w-[425px] bg-white min-h-[80vh] fixed top-[70px] z-10 sm:top-0 right-0 `}>
-            <div onClick={handleClose} className='flex gap-3 justify-end pr-5 mt-5 text-default w-min self-end'>
+            <div onClick={handleClose} className='flex gap-3 justify-end pr-5 mt-5 text-default w-min self-end cursor-pointer'>
                 <span>Cerrar</span>
                 <img className='w-4 h-4 self-center' src={Close} alt='close menu'/> 
             </div>

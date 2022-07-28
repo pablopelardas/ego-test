@@ -22,6 +22,10 @@ module.exports = {
                 'title': ['3.5rem', {
                     lineHeight: '4.4rem'
                 }],
+                'title_desktop': ['5.0rem', {
+                    lineHeight: '5.7rem',
+                    fontWeight: '700'
+                }],
                 'menu_close': '1.7rem',
                 'menu_field': '2.0rem',
                 'detail_name': ['2.0rem', {
@@ -39,7 +43,8 @@ module.exports = {
                 'detail_desc':['1.6rem', {
                     lineHeight: '2.7rem',
                     fontWeight: '400'
-                }]
+                }],
+                'dropdown_field': '1rem',
 
             },
             borderWidth:{
@@ -58,6 +63,8 @@ module.exports = {
                 'detail_name': '#373737',
                 'detail_sub': '#373737',
                 'detail_title': '#191919',
+                'dropdown_field': '#191919',
+                'title_desktop': '#373737',
             }
         },
         

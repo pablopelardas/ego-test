@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 const MenuField = ({field}) => {
     return (
         <Link className='appearance-none' to={field.url || '#'}>
-            <p className='text-menu_field'>{field.name}</p>
+            <p className='text-menu_field hover:bg-slate-300 hover:p-2'>{field.name}</p>
         </Link>
     );
 };
